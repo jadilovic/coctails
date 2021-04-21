@@ -75,9 +75,6 @@ const SingleCocktail = () => {
   } = cocktail;
   return (
     <section className="section cocktail-section">
-      <Link className="btn btn-primary" to="/">
-        back home
-      </Link>
       <h2 className="section-title">{name}</h2>
       <div className="drink">
         <img src={image} alt={name} />
@@ -102,22 +99,17 @@ const SingleCocktail = () => {
             <span className="drink-data">instructions: </span>
             {instructions}
           </p>
-          {ingredients.map((item, index) => {
-            if (item) {
-              return (
-                <p key={index}>
-                  <span className="drink-data">
-                    {`ingredient ${index + 1}:`}{" "}
-                  </span>
-                  {item}
-                </p>
-              );
-            } else {
-              return null;
-            }
-          })}
+          <p>
+            <span className="drink-data">ingredients :</span>
+            {ingredients.map((item, index) => {
+              return item ? <span key={index}> {item}</span> : null;
+            })}
+          </p>
         </div>
       </div>
+      <Link className="btn btn-primary" to="/">
+        back home
+      </Link>
     </section>
   );
 };
