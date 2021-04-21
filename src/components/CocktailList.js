@@ -18,7 +18,7 @@ const CocktailList = () => {
   }
   return (
     <section className="section">
-      <h2 className="section-title">cocktails</h2>
+      <h2 className="section-title">iron horse cocktails</h2>
       <div className="cocktails-center">
         {cocktails.map((item) => {
           return <Cocktail key={item.id} {...item} />;

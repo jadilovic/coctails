@@ -1,15 +1,19 @@
 import React from "react";
+import logo from "../iron.png";
 
 const About = () => {
   return (
     <section className="section about-section">
       <h1 className="section-title">About us</h1>
       <p>
-        Lorem ipsum dolor sit, amet consectetur adipisicing elit. Assumenda,
-        illum? Inventore ad distinctio, beatae exercitationem velit eaque
-        impedit alias repellendus recusandae quisquam obcaecati tempore nobis
-        suscipit, illo dolorem nisi laborum.
+        Iron Horse Brčko is the best Rock Bar in the District. Please join us
+        for a beer and good music. Cheers!
       </p>
+      <h5>Watch one of the many live rock music events in iron horse Brčko.</h5>
+      <a href="https://www.youtube.com/watch?v=sK3r4vamc0s">
+        <img src={logo} alt="Iron Horse Head" />
+        <h1> PLAY</h1>
+      </a>
     </section>
   );
 };
